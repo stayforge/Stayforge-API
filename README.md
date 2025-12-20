@@ -12,9 +12,6 @@
 
 ---
 
-The public repository is available here:
-https://github.com/stayforge/Stayforge-API
-
 This repository serves as the **official documentation hub and issue tracker** for the Stayforge API.
 
 It does **not** contain backend implementation code.  
