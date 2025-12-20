@@ -22,6 +22,7 @@ The official and up-to-date API documentation is hosted here:
 https://docs.stayforge.io/apis/stayforge-api/information
 
 API Reference:
+
 https://docs.stayforge.io/apis/stayforge-api/v1/
 
 ---
