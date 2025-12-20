@@ -83,9 +83,3 @@ Please keep contributions focused on documentation and related materials only.
 - OpenAPI Specification  
   https://api.stayforge.net/v1/openapi.json
 
----
-
-## License
-
-This repository is licensed under the applicable open-source license.  
-Please refer to the `LICENSE` file for details.
