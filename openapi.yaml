@@ -1,44 +1,39 @@
 openapi: 3.0.3
 info:
   title: Stayforge API
-  version: 1.1.0
-  description: |
-    API for managing cards within organizations. 
-
-    Any Question? 
-
-    - [New issues](https://github.com/stayforge/Stayforge-API/issues).
-    - [Documents](http://localhost:3000/apis/stayforge-api/information)
+  version: v1.1.0-pre5
+  description: "API for managing cards within organizations. \n\nAny Question? \n\n\
+    - [New issues](https://github.com/stayforge/Stayforge-API/issues).\n- [Documents](http://localhost:3000/apis/stayforge-api/information)\n"
   contact:
     name: Stayforge Support
     email: support@stayforge.co
 servers:
-  - url: https://api.stayforge.net
-    description: Production server
-  - url: https://staging-api.stayforge.net
-    description: Staging server
-  - url: http://localhost:8080
-    description: Local development server
+- url: https://api.stayforge.net
+  description: Production server
+- url: https://staging-api.stayforge.net
+  description: Staging server
+- url: http://localhost:8080
+  description: Local development server
 security:
-  - ApiKeyAuth: []
+- ApiKeyAuth: []
 tags:
-  - name: Cards
-    description: Card management operations
-  - name: Devices
-    description: Device management operations
+- name: Cards
+  description: Card management operations
+- name: Devices
+  description: Device management operations
 paths:
   /v1/cards/{organization_id}:
     parameters:
-      - $ref: '#/components/parameters/OrganizationIdPath'
+    - $ref: '#/components/parameters/OrganizationIdPath'
     get:
       summary: List cards
       operationId: ListCards
       tags:
-        - Cards
+      - Cards
       parameters:
-        - $ref: '#/components/parameters/ApiKeyHeader'
-        - $ref: '#/components/parameters/PageQuery'
-        - $ref: '#/components/parameters/LimitQuery'
+      - $ref: '#/components/parameters/ApiKeyHeader'
+      - $ref: '#/components/parameters/PageQuery'
+      - $ref: '#/components/parameters/LimitQuery'
       responses:
         '200':
           description: List of cards with pagination
@@ -56,20 +51,22 @@ paths:
       summary: Create a card
       operationId: CreateCard
       tags:
-        - Cards
+      - Cards
       parameters:
-        - $ref: '#/components/parameters/ApiKeyHeader'
-        - name: number
-          in: query
-          required: false
-          description: |
-            Card No. (must be unique within your organization).
-            If not provided, a unique card number will be automatically generated.
-          schema:
-            type: string
-            minLength: 8
-            maxLength: 256
-            description: Card No. (must be unique within your organization).
+      - $ref: '#/components/parameters/ApiKeyHeader'
+      - name: number
+        in: query
+        required: false
+        description: 'Card No. (must be unique within your organization).
+
+          If not provided, a unique card number will be automatically generated.
+
+          '
+        schema:
+          type: string
+          minLength: 8
+          maxLength: 256
+          description: Card No. (must be unique within your organization).
       requestBody:
         required: true
         content:
@@ -91,15 +88,15 @@ paths:
                 $ref: '#/components/schemas/Error'
   /v1/cards/{organization_id}/{card_number}:
     parameters:
-      - $ref: '#/components/parameters/OrganizationIdPath'
-      - $ref: '#/components/parameters/CardNumberPath'
+    - $ref: '#/components/parameters/OrganizationIdPath'
+    - $ref: '#/components/parameters/CardNumberPath'
     get:
       summary: Card details
       operationId: GetCard
       tags:
-        - Cards
+      - Cards
       parameters:
-        - $ref: '#/components/parameters/ApiKeyHeader'
+      - $ref: '#/components/parameters/ApiKeyHeader'
       responses:
         '200':
           description: Card details
@@ -117,9 +114,9 @@ paths:
       summary: Update a card
       operationId: UpdateCard
       tags:
-        - Cards
+      - Cards
       parameters:
-        - $ref: '#/components/parameters/ApiKeyHeader'
+      - $ref: '#/components/parameters/ApiKeyHeader'
       requestBody:
         required: true
         content:
@@ -149,9 +146,9 @@ paths:
       summary: Delete a card
       operationId: DeleteCard
       tags:
-        - Cards
+      - Cards
       parameters:
-        - $ref: '#/components/parameters/ApiKeyHeader'
+      - $ref: '#/components/parameters/ApiKeyHeader'
       responses:
         '204':
           description: Deleted
@@ -161,55 +158,60 @@ components:
       type: apiKey
       in: header
       name: X-API-Key
-      description: |
-        API Key authentication using X-API-Key header.
-        API keys must be prefixed with either `sk_org_` (organization-level) or `sk_ten_` (tenant-level).
+      description: 'API Key authentication using X-API-Key header.
+
+        API keys must be prefixed with either `sk_org_` (organization-level) or `sk_ten_`
+        (tenant-level).
+
         Include the API key in the X-API-Key header as: `X-API-Key: <api_key>`
+
         Get your API key from the [dash.stayforge.io/settings/apikeys](https://dash.stayforge.io/settings/apikeys).
+
+        '
   schemas:
     Card:
       allOf:
-        - $ref: '#/components/schemas/CardProperties'
-        - type: object
-          required:
-            - id
-            - organization_id
-            - number
-          properties:
-            id:
-              type: string
-            organization_id:
-              type: string
-            number:
-              type: string
-              minLength: 8
-              maxLength: 256
-              description: Card No. (must be unique within your organization).
-            created_at:
-              type: string
-              format: date-time
-            updated_at:
-              type: string
-              format: date-time
+      - $ref: '#/components/schemas/CardProperties'
+      - type: object
+        required:
+        - id
+        - organization_id
+        - number
+        properties:
+          id:
+            type: string
+          organization_id:
+            type: string
+          number:
+            type: string
+            minLength: 8
+            maxLength: 256
+            description: Card No. (must be unique within your organization).
+          created_at:
+            type: string
+            format: date-time
+          updated_at:
+            type: string
+            format: date-time
     CardInput:
       allOf:
-        - $ref: '#/components/schemas/CardProperties'
+      - $ref: '#/components/schemas/CardProperties'
     CardUpdate:
       allOf:
-        - $ref: '#/components/schemas/CardProperties'
-        - type: object
-          properties:
-            number:
-              type: string
-              minLength: 8
-              maxLength: 256
-              nullable: true
-              description: Card No. (must be unique within your organization).
+      - $ref: '#/components/schemas/CardProperties'
+      - type: object
+        properties:
+          number:
+            type: string
+            minLength: 8
+            maxLength: 256
+            nullable: true
+            description: Card No. (must be unique within your organization).
     CardListResponse:
       type: object
       required:
-        - cards
-        - pagination
+      - cards
+      - pagination
       properties:
         cards:
           type: array
@@ -220,10 +222,10 @@ components:
     Pagination:
       type: object
       required:
-        - page
-        - limit
-        - total
-        - total_pages
+      - page
+      - limit
+      - total
+      - total_pages
       properties:
         page:
           type: integer
@@ -262,20 +264,23 @@ components:
         prev_page_url:
           type: string
           nullable: true
-          description: URL for the previous page (includes page and limit as query parameters)
+          description: URL for the previous page (includes page and limit as query
+            parameters)
           example: /v1/cards/org_123?page=1&limit=20
         first_page_url:
           type: string
-          description: URL for the first page (includes page=1 and limit as query parameters)
+          description: URL for the first page (includes page=1 and limit as query
+            parameters)
           example: /v1/cards/org_123?page=1&limit=20
         last_page_url:
           type: string
-          description: URL for the last page (includes last page number and limit as query parameters)
+          description: URL for the last page (includes last page number and limit
+            as query parameters)
           example: /v1/cards/org_123?page=5&limit=20
     Error:
       type: object
       required:
-        - message
+      - message
       properties:
         message:
           type: string
@@ -299,33 +304,43 @@ components:
           items:
             type: string
           example:
-            - stayforge-hotel-101
+          - stayforge-hotel-101
           description: List of devices associated with the card.
         effective_at:
           type: string
           format: date-time
           nullable: true
-          description: |
-            Effective time (when the card becomes active).
+          description: 'Effective time (when the card becomes active).
+
             Must be the current time or a future time.
-            Default: UTC, recommended to use the format `2025-02-16T12:00:00+01:00` to ensure the correct time zone.
+
+            Default: UTC, recommended to use the format `2025-02-16T12:00:00+01:00`
+            to ensure the correct time zone.
+
             About ISO 8601: https://en.wikipedia.org/wiki/ISO_8601
+
+            '
         invalid_at:
           type: string
           format: date-time
           nullable: true
-          description: |
-            Invalidation time (when the card becomes invalid/expires).
+          description: 'Invalidation time (when the card becomes invalid/expires).
+
             Must be the current time or a future time.
-            Default: UTC, recommended to use the format `2025-02-16T12:00:00+01:00` to ensure the correct time zone.
+
+            Default: UTC, recommended to use the format `2025-02-16T12:00:00+01:00`
+            to ensure the correct time zone.
+
             About ISO 8601: https://en.wikipedia.org/wiki/ISO_8601
+
+            '
     card_Pagination:
       type: object
       required:
-        - page
-        - limit
-        - total
-        - total_pages
+      - page
+      - limit
+      - total
+      - total_pages
       properties:
         page:
           type: integer
@@ -364,24 +379,27 @@ components:
         prev_page_url:
           type: string
           nullable: true
-          description: URL for the previous page (includes page and limit as query parameters)
+          description: URL for the previous page (includes page and limit as query
+            parameters)
           example: /v1/cards/org_123?page=1&limit=20
         first_page_url:
           type: string
-          description: URL for the first page (includes page=1 and limit as query parameters)
+          description: URL for the first page (includes page=1 and limit as query
+            parameters)
           example: /v1/cards/org_123?page=1&limit=20
         last_page_url:
           type: string
-          description: URL for the last page (includes last page number and limit as query parameters)
+          description: URL for the last page (includes last page number and limit
+            as query parameters)
           example: /v1/cards/org_123?page=5&limit=20
   parameters:
     ApiKeyHeader:
       name: X-API-Key
       in: header
       required: true
-      description: |
-        API Key for authentication. Get your API key from [dash.stayforge.io/settings/apikeys](https://dash.stayforge.io/settings/apikeys). 
-        API keys must be prefixed with either `sk_org_` (organization-level) or `sk_ten_` (tenant-level).
+      description: "API Key for authentication. Get your API key from [dash.stayforge.io/settings/apikeys](https://dash.stayforge.io/settings/apikeys).\
+        \ \nAPI keys must be prefixed with either `sk_org_` (organization-level) or\
+        \ `sk_ten_` (tenant-level).\n"
       schema:
         type: string
         example: sk_org_example_key_1234567890
@@ -408,10 +426,8 @@ components:
       name: page
       in: query
       required: false
-      description: |
-        Page number (starts from 1). 
-        Pagination is mandatory for list endpoints to prevent performance issues.
-        Default: 1
+      description: "Page number (starts from 1). \nPagination is mandatory for list\
+        \ endpoints to prevent performance issues.\nDefault: 1\n"
       schema:
         type: integer
         minimum: 1
@@ -421,10 +437,8 @@ components:
       name: limit
       in: query
       required: false
-      description: |
-        Number of items per page (1-100). 
-        Pagination is mandatory for list endpoints to prevent performance issues.
-        Default: 20, Maximum: 100
+      description: "Number of items per page (1-100). \nPagination is mandatory for\
+        \ list endpoints to prevent performance issues.\nDefault: 20, Maximum: 100\n"
       schema:
         type: integer
         minimum: 1

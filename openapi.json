@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Stayforge API",
-    "version": "1.1.0",
+    "version": "v1.1.0-pre5",
     "description": "API for managing cards within organizations. \n\nAny Question? \n\n- [New issues](https://github.com/stayforge/Stayforge-API/issues).\n- [Documents](http://localhost:3000/apis/stayforge-api/information)\n",
     "contact": {
       "name": "Stayforge Support",
