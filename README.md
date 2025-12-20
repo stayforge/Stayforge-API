@@ -14,16 +14,21 @@
 
 This repository serves as the **official documentation hub and issue tracker** for the Stayforge API.
 
-It does **not** contain backend implementation code.  
-Its purpose is to host API documentation references and to collect feedback, bug reports, and documentation-related issues.
 
-The official and up-to-date API documentation is hosted here:
+## Related Links
 
-https://docs.stayforge.io/apis/stayforge-api/information
+- Official API Documentation
+  https://docs.stayforge.io/apis/stayforge-api/information
 
-API Reference:
+- API Reference
+  https://docs.stayforge.io/apis/stayforge-api/v1/
 
-https://docs.stayforge.io/apis/stayforge-api/v1/
+- OpenAPI Specification
+  [openapi.json](https://github.com/stayforge/Stayforge-API/blob/main/openapi.json), [openapi.yaml](https://github.com/stayforge/Stayforge-API/blob/main/openapi.yaml)
+
+- Stayforge Discord Server
+  https://discord.gg/JYFEttnydq
+
 
 ---
 
@@ -77,14 +82,3 @@ Suggested workflow:
 3. Open a Pull Request with a clear description of what was changed and why
 
 Please keep contributions focused on documentation and related materials only.
-
----
-
-## Related Links
-
-- Official API Documentation  
-  https://docs.stayforge.io/apis/stayforge-api/information
-
-- OpenAPI Specification  
-  https://api.stayforge.net/v1/openapi.json
-
