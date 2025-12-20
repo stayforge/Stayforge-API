@@ -18,15 +18,16 @@ This repository serves as the **official documentation hub and issue tracker** f
 It does **not** contain backend implementation code.  
 Its purpose is to host API documentation references and to collect feedback, bug reports, and documentation-related issues.
 
+The official and up-to-date API documentation is hosted here:
+https://docs.stayforge.io/apis/stayforge-api/information
+
 ---
 
 ## Overview
 
 The Stayforge API provides programmatic access to the Stayforge platform via a RESTful interface.
 
-The official and up-to-date API documentation is hosted here:
 
-https://docs.stayforge.io/apis/stayforge-api/information
 
 This repository exists to support that documentation and to provide a structured place for discussion and issue tracking.
 
