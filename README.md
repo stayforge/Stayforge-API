@@ -17,7 +17,7 @@ This repository serves as the **official documentation hub and issue tracker** f
 
 ## Related Links
 
-- Official API Documentation
+- API Documentation
   https://docs.stayforge.io/apis/stayforge-api/information
 
 - API Reference
