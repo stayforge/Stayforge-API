@@ -2,7 +2,13 @@ openapi: 3.0.3
 info:
   title: Stayforge API
   version: 1.1.0
-  description: API for managing cards within organizations
+  description: |
+    API for managing cards within organizations. 
+
+    Any Question? 
+
+    - [New issues](https://github.com/stayforge/Stayforge-API/issues).
+    - [Documents](http://localhost:3000/apis/stayforge-api/information)
   contact:
     name: Stayforge Support
     email: support@stayforge.co
