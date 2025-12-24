@@ -2,8 +2,8 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Stayforge API",
-    "version": "v1.1.0-pre5",
-    "description": "API for managing cards within organizations. \n\nAny Question? \n\n- [New issues](https://github.com/stayforge/Stayforge-API/issues).\n- [Documents](http://localhost:3000/apis/stayforge-api/information)\n",
+    "version": "v1.1.0-pre6",
+    "description": "API for managing cards within organizations. \n\n## Environment Switching\n\nThe API supports **production** and **sandbox** environments using the `X-Environment` header:\n\n- **Production** (default): Real data, affects live system\n- **Sandbox**: Isolated test environment, safe for experimentation\n\nSimply add `X-Environment: sandbox` header to route requests to sandbox database.\n\n**Example:**\n```bash\n# Production request (default)\ncurl -H \"X-API-Key: sk_org_...\" https://api.stayforge.net/v1/cards/org_123\n\n# Sandbox request\ncurl -H \"X-API-Key: sk_org_...\" \\\n     -H \"X-Environment: sandbox\" \\\n     https://api.stayforge.net/v1/cards/org_123\n```\n\nData is completely isolated between environments - changes in sandbox will not affect production.\n\n---\n\nAny Question? \n\n- [New issues](https://github.com/stayforge/Stayforge-API/issues).\n- [Documents](http://localhost:3000/apis/stayforge-api/information)\n",
     "contact": {
       "name": "Stayforge Support",
       "email": "support@stayforge.co"
@@ -56,6 +56,9 @@
             "$ref": "#/components/parameters/ApiKeyHeader"
           },
           {
+            "$ref": "#/components/parameters/EnvironmentHeader"
+          },
+          {
             "$ref": "#/components/parameters/PageQuery"
           },
           {
@@ -94,6 +97,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/ApiKeyHeader"
+          },
+          {
+            "$ref": "#/components/parameters/EnvironmentHeader"
           },
           {
             "name": "number",
@@ -160,6 +166,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/ApiKeyHeader"
+          },
+          {
+            "$ref": "#/components/parameters/EnvironmentHeader"
           }
         ],
         "responses": {
@@ -194,6 +203,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/ApiKeyHeader"
+          },
+          {
+            "$ref": "#/components/parameters/EnvironmentHeader"
           }
         ],
         "requestBody": {
@@ -248,6 +260,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/ApiKeyHeader"
+          },
+          {
+            "$ref": "#/components/parameters/EnvironmentHeader"
           }
         ],
         "responses": {
@@ -548,6 +563,21 @@
         "schema": {
           "type": "string",
           "example": "sk_org_example_key_1234567890"
+        }
+      },
+      "EnvironmentHeader": {
+        "name": "X-Environment",
+        "in": "header",
+        "required": false,
+        "description": "Environment selector for database routing.\n\n**Values:**\n- `sandbox` - Routes request to sandbox database (case-insensitive)\n- `production` or omitted - Routes request to production database (default)\n\n**Use Cases:**\n- Testing new integrations without affecting production data\n- Development and staging environments\n- Safe experimentation with API features\n\n**Data Isolation:**\n- Production and sandbox databases are completely isolated\n- Data created in sandbox will NOT appear in production\n- Data created in production will NOT appear in sandbox\n\n**Example:**\n```\n# Production request (default)\ncurl -H \"X-API-Key: sk_org_...\" https://api.stayforge.net/v1/cards/org_123\n\n# Sandbox request\ncurl -H \"X-API-Key: sk_org_...\" -H \"X-Environment: sandbox\" https://api.stayforge.net/v1/cards/org_123\n```\n",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "sandbox",
+            "production"
+          ],
+          "default": "production",
+          "example": "sandbox"
         }
       },
       "OrganizationIdPath": {
