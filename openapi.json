@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Stayforge API",
-    "version": "v1.1.0-pre6",
+    "version": "v1.1.0-pre7",
     "description": "API for managing cards within organizations. \n\n## Environment Switching\n\nThe API supports **production** and **sandbox** environments using the `X-Environment` header:\n\n- **Production** (default): Real data, affects live system\n- **Sandbox**: Isolated test environment, safe for experimentation\n\nSimply add `X-Environment: sandbox` header to route requests to sandbox database.\n\n**Example:**\n```bash\n# Production request (default)\ncurl -H \"X-API-Key: sk_org_...\" https://api.stayforge.net/v1/cards/org_123\n\n# Sandbox request\ncurl -H \"X-API-Key: sk_org_...\" \\\n     -H \"X-Environment: sandbox\" \\\n     https://api.stayforge.net/v1/cards/org_123\n```\n\nData is completely isolated between environments - changes in sandbox will not affect production.\n\n---\n\nAny Question? \n\n- [New issues](https://github.com/stayforge/Stayforge-API/issues).\n- [Documents](http://localhost:3000/apis/stayforge-api/information)\n",
     "contact": {
       "name": "Stayforge Support",
