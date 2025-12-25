@@ -5,7 +5,7 @@
 [![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0.3-6BA539?style=for-the-badge&logo=openapiinitiative)](./openapi/openapi.yaml)
 [![Gin Framework](https://img.shields.io/badge/Gin-Framework-00ADD8?style=for-the-badge)](https://github.com/gin-gonic/gin)
 
-[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v2/monitor/2a9d9.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
+[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v2/monitor/2a9d9.svg)](https://status.stayforge.io)
 [![codecov](https://img.shields.io/codecov/c/github/stayforge/api.stayforge.net?style=flat-square&logo=codecov)](https://codecov.io/gh/stayforge/api.stayforge.net)
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤-red?style=flat-square)](https://stayforge.net)
 
