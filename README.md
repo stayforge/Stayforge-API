@@ -27,7 +27,7 @@ Manage your keys in here: https://dash.stayforge.io/settings/apikeys
 
 Then, Put APIKey to Header `X-API-Key`:
 ```bash
-curl -X GET "[https://api.stayforge.net/v1/me](https://api.stayforge.net/v1/me)" \
+curl -X GET "https://api.stayforge.net/v1/endpoint" \
      -H "X-API-Key: YOUR_API_KEY_HERE" \
      -H "Content-Type: application/json"
 ```
