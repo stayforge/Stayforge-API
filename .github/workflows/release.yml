@@ -1,0 +1,107 @@
+name: Create Release with OpenAPI Specs
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Listen for version tags, e.g., v1.2.3
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag to create release (e.g., v1.2.3)'
+        required: true
+        type: string
+
+jobs:
+  create-release:
+    name: Create Release with OpenAPI Specs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Need full git history to get tag information
+      
+      - name: Determine version tag
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            # Extract version from pushed tag
+            VERSION="${GITHUB_REF#refs/tags/}"
+          fi
+          
+          # Validate version format (v1.2.3 or 1.2.3)
+          if [[ ! "$VERSION" =~ ^v?[0-9]+\.[0-9]+\.[0-9]+ ]]; then
+            echo "::error::Invalid version format: $VERSION. Expected format: v1.2.3 or 1.2.3"
+            exit 1
+          fi
+          
+          # Ensure version has 'v' prefix
+          if [[ ! "$VERSION" =~ ^v ]]; then
+            VERSION="v${VERSION}"
+          fi
+          
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Using version: $VERSION"
+      
+      - name: Verify OpenAPI files exist
+        run: |
+          if [ ! -f "openapi.yaml" ]; then
+            echo "::error::openapi.yaml not found in repository root"
+            exit 1
+          fi
+          if [ ! -f "openapi.json" ]; then
+            echo "::error::openapi.json not found in repository root"
+            exit 1
+          fi
+          echo "✓ OpenAPI files found"
+      
+      - name: Prepare release assets with version
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          
+          # Create versioned filenames
+          cp openapi.yaml "stayforge-api-${VERSION}-openapi.yaml"
+          cp openapi.json "stayforge-api-${VERSION}-openapi.json"
+          
+          echo "✓ Prepared release assets:"
+          echo "  - stayforge-api-${VERSION}-openapi.yaml"
+          echo "  - stayforge-api-${VERSION}-openapi.json"
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: "Stayforge API ${{ steps.version.outputs.version }}"
+          body: |
+            ## Stayforge API OpenAPI Specification
+            
+            This release contains the OpenAPI specification for Stayforge API version **${{ steps.version.outputs.version }}**.
+            
+            ### Files
+            
+            - `stayforge-api-${{ steps.version.outputs.version }}-openapi.yaml` - OpenAPI specification in YAML format
+            - `stayforge-api-${{ steps.version.outputs.version }}-openapi.json` - OpenAPI specification in JSON format
+            
+            ### Usage
+            
+            You can use these files to:
+            - Generate API client libraries
+            - View API documentation
+            - Validate API requests/responses
+            - Integrate with API testing tools
+            
+            ### Version History
+            
+            Historical versions are available in the `versions/` directory.
+          files: |
+            stayforge-api-${{ steps.version.outputs.version }}-openapi.yaml
+            stayforge-api-${{ steps.version.outputs.version }}-openapi.json
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
