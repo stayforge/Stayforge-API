@@ -12,80 +12,48 @@
 
 ---
 
-This repository serves as the **official documentation hub and issue tracker** for the Stayforge API.
+## 📖 Overview
 
+The Stayforge API provides programmatic access to the Stayforge platform via a RESTful interface. This repository serves as the **official documentation hub and issue tracker**.
 
-## Related Links
-
-- API Documentation
-  https://docs.stayforge.io/apis/stayforge-api/information
-
-- API Reference
-  https://docs.stayforge.io/apis/stayforge-api/v1/
-
-- OpenAPI Specification
-  [openapi.json](https://stayforge.github.io/Stayforge-API/openapi.json), [openapi.yaml](https://stayforge.github.io/Stayforge-API/openapi.yaml)
-
-- Stayforge Discord Server
-  https://discord.gg/JYFEttnydq
+### Quick Links
+* **Documentation:** [Official Guides](https://docs.stayforge.io/apis/stayforge-api/information) & [API Reference](https://docs.stayforge.io/apis/stayforge-api/v1/)
+* **Specification:** [openapi.json](https://stayforge.github.io/Stayforge-API/openapi.json) / [openapi.yaml](https://stayforge.github.io/Stayforge-API/openapi.yaml)
+* **Community:** Discord：https://discord.gg/JYFEttnydq
 
 > [!TIP]
-> **Need help?**
-> 
-> Issues here: https://github.com/stayforge/Stayforge-API/issues
-> 
-> Discord: https://discord.gg/JYFEttnydq
+> **Need help or found a bug?**
+>
+> For real-time support, join our [Discord](https://discord.gg/JYFEttnydq).
+>
+> To report bugs or documentation inconsistencies, please open a [GitHub Issue](https://github.com/stayforge/Stayforge-API/issues).
 
 ---
 
-## Overview
+## 🛠 What You’ll Find Here
 
-The Stayforge API provides programmatic access to the Stayforge platform via a RESTful interface.
-
-This repository exists to support that documentation and to provide a structured place for discussion and issue tracking.
-
----
-
-## What You’ll Find Here
-
-- 📄 **API Documentation References**  
-  Links and metadata related to the official Stayforge API documentation.
-
-- 🐛 **Issue Tracking**  
-  A centralized place to report documentation bugs, inconsistencies, or unclear behavior.
-
-- ✨ **Feature & Documentation Requests**  
-  Suggestions for improving the API documentation, examples, or explanations.
-
-> [!TIP]
-> 這是 **Tip**：用於提供建議或更有效率的做法。
+* 📄 **Documentation Metadata** – Links and schemas for the official Stayforge API.
+* 🐛 **Issue Tracking** – A centralized place to report bugs or unclear API behavior.
+* ✨ **Feedback** – Suggestions for improving examples or explanations.
 
 ---
 
-## Submitting Issues
+## 🚀 Contributing & Issues
 
-Please use the provided GitHub Issue templates when opening an issue:
+We welcome contributions to improve our documentation!
 
-- **Bug Report** — For errors or inconsistencies in the documentation
-- **Feature Request** — For suggestions or improvements
-- **Documentation Issue** — For unclear, missing, or misleading documentation
+### Submitting Issues
+Please use our [Issue Templates](https://github.com/stayforge/Stayforge-API/issues/new/choose) for:
+* **Bug Report** — For errors or inconsistencies in the documentation.
+* **Feature Request** — For suggestions or improvements.
+* **Documentation Issue** — For unclear, missing, or misleading documentation.
 
-Using the templates helps keep reports actionable and easy to review.
+### Workflow
+1. **Fork** the repository.
+2. **Make changes** (Markdown or schema updates).
+3. **Open a Pull Request** with a clear description of the improvement.
 
 ---
 
-## Contributing
-
-Contributions are welcome in the form of:
-
-- Documentation fixes
-- Clarifications or improved explanations
-- Example improvements
-
-Suggested workflow:
-
-1. Fork this repository
-2. Make your changes (Markdown only)
-3. Open a Pull Request with a clear description of what was changed and why
-
-Please keep contributions focused on documentation and related materials only.
+## 🛡 License
+*Stayforge API Documentation is maintained by the Stayforge Team.*
