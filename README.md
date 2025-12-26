@@ -29,14 +29,18 @@ This repository serves as the **official documentation hub and issue tracker** f
 - Stayforge Discord Server
   https://discord.gg/JYFEttnydq
 
+> [!TIP]
+> **Need help?**
+> 
+> Issues here: https://github.com/stayforge/Stayforge-API/issues
+> 
+> Discord: https://discord.gg/JYFEttnydq
 
 ---
 
 ## Overview
 
 The Stayforge API provides programmatic access to the Stayforge platform via a RESTful interface.
-
-
 
 This repository exists to support that documentation and to provide a structured place for discussion and issue tracking.
 
@@ -52,6 +56,9 @@ This repository exists to support that documentation and to provide a structured
 
 - ✨ **Feature & Documentation Requests**  
   Suggestions for improving the API documentation, examples, or explanations.
+
+> [!TIP]
+> 這是 **Tip**：用於提供建議或更有效率的做法。
 
 ---
 
