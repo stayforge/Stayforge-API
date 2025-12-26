@@ -21,6 +21,17 @@ The Stayforge API provides programmatic access to the Stayforge platform via a R
 * **Specification:** [openapi.json](https://stayforge.github.io/Stayforge-API/openapi.json) / [openapi.yaml](https://stayforge.github.io/Stayforge-API/openapi.yaml)
 * **Community:** Discord：https://discord.gg/JYFEttnydq
 
+#### How to get a APIKey?
+
+Manage your keys in here: https://dash.stayforge.io/settings/apikeys
+
+Then, Put APIKey to Header `X-API-Key`:
+```bash
+curl -X GET "[https://api.stayforge.net/v1/me](https://api.stayforge.net/v1/me)" \
+     -H "X-API-Key: YOUR_API_KEY_HERE" \
+     -H "Content-Type: application/json"
+```
+
 > [!TIP]
 > **Need help or found a bug?**
 >
