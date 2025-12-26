@@ -24,7 +24,7 @@ This repository serves as the **official documentation hub and issue tracker** f
   https://docs.stayforge.io/apis/stayforge-api/v1/
 
 - OpenAPI Specification
-  [openapi.json](https://github.com/stayforge/Stayforge-API/blob/main/openapi.json), [openapi.yaml](https://github.com/stayforge/Stayforge-API/blob/main/openapi.yaml)
+  [openapi.json](https://stayforge.github.io/Stayforge-API/openapi.json), [openapi.yaml](https://stayforge.github.io/Stayforge-API/openapi.yaml)
 
 - Stayforge Discord Server
   https://discord.gg/JYFEttnydq
