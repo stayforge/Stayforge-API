@@ -2,7 +2,7 @@
 
 [![Go Version](https://img.shields.io/badge/Go-1.25+-00ADD8?style=for-the-badge&logo=go)](https://golang.org)
 [![API Version](https://img.shields.io/badge/API-v1.1.0-blue?style=for-the-badge)](https://api.stayforge.net)
-[![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0.3-6BA539?style=for-the-badge&logo=openapiinitiative)](./openapi/openapi.yaml)
+[![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0.3-6BA539?style=for-the-badge&logo=openapiinitiative)](./openapi.yaml)
 [![Gin Framework](https://img.shields.io/badge/Gin-Framework-00ADD8?style=for-the-badge)](https://github.com/gin-gonic/gin)
 
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v2/monitor/2a9d9.svg)](https://status.stayforge.io)
