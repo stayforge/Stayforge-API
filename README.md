@@ -16,7 +16,7 @@
 
 The Stayforge API provides programmatic access to the Stayforge platform via a RESTful interface. This repository serves as the **official documentation hub and issue tracker**.
 
-### Quick Links
+#### Quick Links
 * **Documentation:** [Official Guides](https://docs.stayforge.io/apis/stayforge-api/information) & [API Reference](https://docs.stayforge.io/apis/stayforge-api/v1/)
 * **Specification:** [openapi.json](https://stayforge.github.io/Stayforge-API/openapi.json) / [openapi.yaml](https://stayforge.github.io/Stayforge-API/openapi.yaml)
 * **Community:** Discord：https://discord.gg/JYFEttnydq
