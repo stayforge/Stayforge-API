@@ -1,12 +1,12 @@
 # Stayforge API
 
 [![Go Version](https://img.shields.io/badge/Go-1.25+-00ADD8?style=for-the-badge&logo=go)](https://golang.org)
-[![API Version](https://img.shields.io/badge/API-v1.1.0-blue?style=for-the-badge)](https://api.stayforge.net)
+[![API Version](https://img.shields.io/github/v/release/stayforge/Stayforge-API?sort=semver&display_name=tag&style=for-the-badge)](https://github.com/stayforge/Stayforge-API/releases/latest)
 [![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0.3-6BA539?style=for-the-badge&logo=openapiinitiative)](./openapi.yaml)
 [![Gin Framework](https://img.shields.io/badge/Gin-Framework-00ADD8?style=for-the-badge)](https://github.com/gin-gonic/gin)
 
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v2/monitor/2a9d9.svg)](https://status.stayforge.io)
-[![codecov](https://img.shields.io/codecov/c/github/stayforge/api.stayforge.net?style=flat-square&logo=codecov)](https://codecov.io/gh/stayforge/api.stayforge.net)
+[![codecov](https://img.shields.io/codecov/c/github/stayforge/Stayforge-API?style=flat-square&logo=codecov)](https://codecov.io/gh/stayforge/Stayforge-API)
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤-red?style=flat-square)](https://stayforge.net)
 
 
