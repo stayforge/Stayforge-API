@@ -32,6 +32,14 @@ curl -X GET "https://api.stayforge.net/v1/endpoint" \
      -H "Content-Type: application/json"
 ```
 
+#### About OpenAPI & SDK
+
+We are currently developing official SDKs for multiple languages, including Node.js, Python, Go, Java, and C#, all generated from and strictly aligned with this OpenAPI specification.
+
+[openapi.json](https://stayforge.github.io/Stayforge-API/openapi.json) / [openapi.yaml](https://stayforge.github.io/Stayforge-API/openapi.yaml)
+
+Before the official SDKs are released, you can already start integrating with our APIs by leveraging community-maintained OpenAPI tooling. In particular, for TypeScript projects, we recommend using `openapi-typescript` to generate type-safe client definitions directly from our OpenAPI schema, enabling rapid and reliable development.
+
 > [!TIP]
 > **Need help or found a bug?**
 >
