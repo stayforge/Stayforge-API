@@ -6,9 +6,11 @@
 [![Gin Framework](https://img.shields.io/badge/Gin-Framework-00ADD8?style=for-the-badge)](https://github.com/gin-gonic/gin)
 
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v2/monitor/2a9d9.svg)](https://status.stayforge.io)
-[![codecov](https://codecov.io/gh/stayforge/api.stayforge.net/graph/badge.svg?token=90eU6Z6W0E)](https://codecov.io/gh/stayforge/Stayforge-API)
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤-red?style=flat-square)](https://stayforge.net)
 
+
+[![codecov](https://codecov.io/gh/stayforge/api.stayforge.net/graph/badge.svg?token=90eU6Z6W0E)](https://codecov.io/gh/stayforge/Stayforge-API)
+(Target: 80%+)
 
 ---
 
