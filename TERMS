@@ -1,0 +1,75 @@
+Stayforge API Terms of Service
+
+These Stayforge API Terms of Service (“Terms”) govern the use of the Stayforge API (the “API”) provided by Stayforge (“we”, “us”, or “our”).
+
+By accessing or using the API, you (“Customer” or “you”) agree to be bound by these Terms.
+	1.	Purpose
+
+The API is provided solely for the purpose of enabling you to integrate Stayforge functionality into your own systems, applications, or business workflows.
+	2.	License Grant
+
+Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, and revocable license to access and use the API.
+
+All rights, title, and interest in and to the API, including all related intellectual property rights, are and shall remain with us or our licensors.
+	3.	OpenAPI Specification
+
+We may provide an OpenAPI specification, including but not limited to YAML, JSON, or HTML formats (the “Specification”), for the purpose of facilitating development against the API.
+
+The Specification may be used solely for developing, testing, and operating applications that interact with the Stayforge API.
+
+You shall not redistribute, publish, disclose, or provide the Specification to any third party.
+
+You shall not use the Specification to develop, operate, or support any service or API other than the Stayforge API, including any competing or compatible service.
+
+You shall not create or publish derivative specifications or documentation based on the Specification.
+
+You may fetch, store, and process the Specification internally, including for CI/CD pipelines, SDK generation, and automated testing.
+	4.	Authentication Credentials
+
+Use of the API requires authentication credentials such as API keys or tokens issued by us.
+
+You are responsible for safeguarding your credentials and must not share them with any third party.
+
+All actions performed using your credentials will be deemed to have been performed by you.
+	5.	Prohibited Conduct
+
+You shall not, directly or indirectly:
+	•	Reverse engineer, decompile, or attempt to derive the source code or internal logic of the API;
+	•	Bypass or circumvent authentication mechanisms, rate limits, or access controls;
+	•	Use the API in violation of any applicable laws or regulations;
+	•	Use the API for unlawful, abusive, or fraudulent activities;
+	•	Resell, sublicense, or provide the API to any third party unless expressly authorized by us.
+
+	6.	Suspension and Termination
+
+We may suspend or terminate your access to the API, in whole or in part, without prior notice if:
+	•	You violate these Terms;
+	•	Your use of the API poses a security risk, causes excessive load, or disrupts the service;
+	•	Maintenance, system changes, or operational requirements make such action necessary.
+
+	7.	Changes to the API
+
+We may modify, update, or discontinue the API or the Specification at any time without prior notice.
+
+We shall not be liable for any damages arising from such changes.
+	8.	Disclaimer of Warranties
+
+THE API IS PROVIDED “AS IS” AND “AS AVAILABLE”.
+
+WE DISCLAIM ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+	9.	Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OR INABILITY TO USE THE API, EXCEPT IN CASES OF WILLFUL MISCONDUCT OR GROSS NEGLIGENCE.
+	10.	Trademarks
+
+“Stayforge” and all related names, logos, and trademarks are our property.
+
+Nothing in these Terms grants you any right to use our trademarks.
+	11.	Relationship of the Parties
+
+These Terms do not create any partnership, joint venture, agency, or employment relationship between you and us.
+	12.	Governing Law and Jurisdiction
+
+These Terms shall be governed by and construed in accordance with the laws of Japan.
+
+Any disputes arising out of or relating to these Terms or the API shall be subject to the exclusive jurisdiction of the courts having jurisdiction over our principal place of business.
