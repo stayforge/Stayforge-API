@@ -12,6 +12,9 @@
 [![codecov](https://codecov.io/gh/stayforge/api.stayforge.net/graph/badge.svg?token=90eU6Z6W0E)](https://codecov.io/gh/stayforge/Stayforge-API)
 (Target: 80%+)
 
+
+---
+Stayforge API Terms of Service：[TERMS](https://github.com/stayforge/Stayforge-API/blob/main/TERMS)
 ---
 
 ## 📖 Overview
