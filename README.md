@@ -14,7 +14,9 @@
 
 
 ---
+
 Stayforge API Terms of Service：[TERMS](https://github.com/stayforge/Stayforge-API/blob/main/TERMS)
+
 ---
 
 ## 📖 Overview
