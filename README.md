@@ -1,5 +1,3 @@
-# Stayforge API
-
 [![Go Version](https://img.shields.io/badge/Go-1.25+-00ADD8?style=for-the-badge&logo=go)](https://golang.org)
 [![API Version](https://img.shields.io/github/v/release/stayforge/Stayforge-API?sort=semver&display_name=tag&style=for-the-badge)](https://github.com/stayforge/Stayforge-API/releases/latest)
 [![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0.3-6BA539?style=for-the-badge&logo=openapiinitiative)](./openapi.yaml)
