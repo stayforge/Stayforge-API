@@ -11,12 +11,6 @@
 (Target: 80%+)
 
 
----
-
-Stayforge API Terms of Service：[TERMS](https://github.com/stayforge/Stayforge-API/blob/main/TERMS)
-
----
-
 ## 📖 Overview
 
 The Stayforge API provides programmatic access to the Stayforge platform via a RESTful interface. This repository serves as the **official documentation hub and issue tracker**.
