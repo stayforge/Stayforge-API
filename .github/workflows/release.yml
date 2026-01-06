@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*.*.*'
+      - 'v*.*.*-**'
   workflow_dispatch:
     inputs:
       version:
@@ -93,6 +94,5 @@ jobs:
             stayforge-api-${{ steps.version.outputs.version }}-openapi.json
           draft: false
           prerelease: ${{ steps.version.outputs.prerelease }}
-          make_latest: ${{ steps.version.outputs.prerelease == 'true' && 'false' || 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
