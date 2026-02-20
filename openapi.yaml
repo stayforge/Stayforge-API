@@ -1044,6 +1044,7 @@ paths:
         type: string
         minLength: 1
         maxLength: 256
+        pattern: ^[a-zA-Z0-9_-]+$
       description: Device serial number
       example: SFVA78RABZ12345678
     get:
@@ -5776,7 +5777,15 @@ components:
         sn:
           type: string
           nullable: true
-          description: Serial number of the device.
+          minLength: 1
+          maxLength: 256
+          pattern: ^[a-zA-Z0-9_-]+$
+          description: 'Serial number of the device.
+
+            Must contain only alphanumeric characters, hyphens (-), or underscores
+            (_).
+
+            '
         display_name:
           type: string
           nullable: true
@@ -5940,8 +5949,16 @@ components:
             '
         sn:
           type: string
-          description: Serial number of the device. This field is required when creating
+          minLength: 1
+          maxLength: 256
+          pattern: ^[a-zA-Z0-9_-]+$
+          description: 'Serial number of the device. This field is required when creating
             a device.
+
+            Must contain only alphanumeric characters, hyphens (-), or underscores
+            (_).
+
+            '
     DeviceUpdate:
       allOf:
       - $ref: '#/components/schemas/DeviceProperties'
@@ -5962,6 +5979,15 @@ components:
           sn:
             type: string
             nullable: true
+            minLength: 1
+            maxLength: 256
+            pattern: ^[a-zA-Z0-9_-]+$
+            description: 'Serial number of the device.
+
+              Must contain only alphanumeric characters, hyphens (-), or underscores
+              (_).
+
+              '
           display_name:
             type: string
             nullable: true
