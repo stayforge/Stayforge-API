@@ -5786,7 +5786,13 @@ components:
         price_id:
           type: string
           nullable: true
-          description: Stripe price ID for billing purposes.
+          pattern: ^[a-zA-Z0-9_-]+$
+          description: 'Stripe price ID for billing purposes.
+
+            Must contain only alphanumeric characters, hyphens (-), or underscores
+            (_).
+
+            '
         status:
           $ref: '#/components/schemas/DeviceStatus'
         metadata:
@@ -5970,6 +5976,13 @@ components:
           price_id:
             type: string
             nullable: true
+            pattern: ^[a-zA-Z0-9_-]+$
+            description: 'Stripe price ID for billing purposes.
+
+              Must contain only alphanumeric characters, hyphens (-), or underscores
+              (_).
+
+              '
           status:
             $ref: '#/components/schemas/DeviceStatus'
           metadata:
