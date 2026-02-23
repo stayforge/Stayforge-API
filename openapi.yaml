@@ -502,6 +502,10 @@ paths:
           description: 'Unprocessable Entity - Request is well-formed but contains
             semantic errors.
 
+            For time validation: `effective_at` must be earlier than `invalid_at`.
+            When both fields are provided in the same request, they are validated
+            against each other (the new values), not against the currently stored values.
+
             Error codes: `unprocessable_entity`
 
             '
@@ -5536,7 +5540,11 @@ components:
           nullable: true
           description: 'Effective time (when the card becomes active).
 
-            Must be the current time or a future time.
+            Must be the current time or a future time, and must be earlier than `invalid_at`.
+
+            When updating both `effective_at` and `invalid_at` in a single PATCH request,
+            `effective_at` is validated against the new `invalid_at` value provided in
+            the request body (not the currently stored `invalid_at`).
 
             **⚠️Default: `UTC`**, recommended to use the format `2025-02-16T12:00:00+01:00`
             to ensure the correct time zone.
@@ -5550,7 +5558,11 @@ components:
           nullable: true
           description: 'Invalidation time (when the card becomes invalid/expires).
 
-            Must be the current time or a future time.
+            Must be the current time or a future time, and must be later than `effective_at`.
+
+            When updating both `effective_at` and `invalid_at` in a single PATCH request,
+            `invalid_at` is validated against the new `effective_at` value provided in
+            the request body (not the currently stored `effective_at`).
 
             **⚠️Default: `UTC`**, recommended to use the format `2025-02-16T12:00:00+01:00`
             to ensure the correct time zone.
