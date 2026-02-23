@@ -5776,6 +5776,7 @@ components:
         sn:
           type: string
           nullable: true
+          pattern: ^[a-zA-Z0-9_-]+$
           description: Serial number of the device.
         display_name:
           type: string
@@ -5786,6 +5787,7 @@ components:
         price_id:
           type: string
           nullable: true
+          pattern: ^[a-zA-Z0-9_-]+$
           description: Stripe price ID for billing purposes.
         status:
           $ref: '#/components/schemas/DeviceStatus'
@@ -5940,6 +5942,7 @@ components:
             '
         sn:
           type: string
+          pattern: ^[a-zA-Z0-9_-]+$
           description: Serial number of the device. This field is required when creating
             a device.
     DeviceUpdate:
@@ -5962,6 +5965,7 @@ components:
           sn:
             type: string
             nullable: true
+            pattern: ^[a-zA-Z0-9_-]+$
           display_name:
             type: string
             nullable: true
@@ -5970,6 +5974,7 @@ components:
           price_id:
             type: string
             nullable: true
+            pattern: ^[a-zA-Z0-9_-]+$
           status:
             $ref: '#/components/schemas/DeviceStatus'
           metadata:
@@ -5982,6 +5987,7 @@ components:
       properties:
         sn:
           type: string
+          pattern: ^[a-zA-Z0-9_-]+$
           description: Device serial number
           example: SFVA78RABZ12345678
         model_name:
