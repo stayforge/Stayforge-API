@@ -7320,7 +7320,8 @@
           "price_id": {
             "type": "string",
             "nullable": true,
-            "description": "Stripe price ID for billing purposes."
+            "description": "Stripe price ID for billing purposes.",
+            "pattern": "^price_[a-zA-Z0-9_]+$"
           },
           "status": {
             "$ref": "#/components/schemas/DeviceStatus"
@@ -7479,7 +7480,8 @@
               },
               "price_id": {
                 "type": "string",
-                "nullable": true
+                "nullable": true,
+                "pattern": "^price_[a-zA-Z0-9_]+$"
               },
               "status": {
                 "$ref": "#/components/schemas/DeviceStatus"
