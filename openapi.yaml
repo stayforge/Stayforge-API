@@ -1044,6 +1044,7 @@ paths:
         type: string
         minLength: 1
         maxLength: 256
+        pattern: ^[a-zA-Z0-9_-]+$
       description: Device serial number
       example: SFVA78RABZ12345678
     get:
@@ -5776,6 +5777,7 @@ components:
         sn:
           type: string
           nullable: true
+          pattern: ^[a-zA-Z0-9_-]+$
           description: Serial number of the device.
         display_name:
           type: string
@@ -5940,6 +5942,7 @@ components:
             '
         sn:
           type: string
+          pattern: ^[a-zA-Z0-9_-]+$
           description: Serial number of the device. This field is required when creating
             a device.
     DeviceUpdate:
@@ -5962,6 +5965,7 @@ components:
           sn:
             type: string
             nullable: true
+            pattern: ^[a-zA-Z0-9_-]+$
           display_name:
             type: string
             nullable: true
@@ -5982,6 +5986,7 @@ components:
       properties:
         sn:
           type: string
+          pattern: ^[a-zA-Z0-9_-]+$
           description: Device serial number
           example: SFVA78RABZ12345678
         model_name:
