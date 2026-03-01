@@ -5786,6 +5786,7 @@ components:
         price_id:
           type: string
           nullable: true
+          pattern: ^[a-zA-Z0-9_-]+$
           description: Stripe price ID for billing purposes.
         status:
           $ref: '#/components/schemas/DeviceStatus'
@@ -5970,6 +5971,7 @@ components:
           price_id:
             type: string
             nullable: true
+            pattern: ^[a-zA-Z0-9_-]+$
           status:
             $ref: '#/components/schemas/DeviceStatus'
           metadata:
