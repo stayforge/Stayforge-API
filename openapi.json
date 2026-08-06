@@ -1384,7 +1384,8 @@
           "schema": {
             "type": "string",
             "minLength": 1,
-            "maxLength": 256
+            "maxLength": 256,
+            "pattern": "^[a-zA-Z0-9_-]+$"
           },
           "description": "Device serial number",
           "example": "SFVA78RABZ12345678"
@@ -7449,6 +7450,7 @@
           "sn": {
             "type": "string",
             "nullable": true,
+            "pattern": "^[a-zA-Z0-9_-]+$",
             "description": "Serial number of the device."
           },
           "display_name": {
@@ -7588,6 +7590,7 @@
           },
           "sn": {
             "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
             "description": "Serial number of the device. This field is required when creating a device."
           }
         }
@@ -7610,7 +7613,8 @@
               },
               "sn": {
                 "type": "string",
-                "nullable": true
+                "nullable": true,
+                "pattern": "^[a-zA-Z0-9_-]+$"
               },
               "display_name": {
                 "type": "string",
@@ -7641,6 +7645,7 @@
         "properties": {
           "sn": {
             "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
             "description": "Device serial number",
             "example": "SFVA78RABZ12345678"
           },
