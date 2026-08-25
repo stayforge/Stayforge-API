@@ -7449,6 +7449,7 @@
           "sn": {
             "type": "string",
             "nullable": true,
+            "pattern": "^[a-zA-Z0-9_-]+$",
             "description": "Serial number of the device."
           },
           "display_name": {
@@ -7461,6 +7462,7 @@
           "price_id": {
             "type": "string",
             "nullable": true,
+            "pattern": "^[a-zA-Z0-9_-]+$",
             "description": "Stripe price ID for billing purposes."
           },
           "status": {
@@ -7588,6 +7590,7 @@
           },
           "sn": {
             "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
             "description": "Serial number of the device. This field is required when creating a device."
           }
         }
@@ -7610,7 +7613,8 @@
               },
               "sn": {
                 "type": "string",
-                "nullable": true
+                "nullable": true,
+                "pattern": "^[a-zA-Z0-9_-]+$"
               },
               "display_name": {
                 "type": "string",
@@ -7620,7 +7624,8 @@
               },
               "price_id": {
                 "type": "string",
-                "nullable": true
+                "nullable": true,
+                "pattern": "^[a-zA-Z0-9_-]+$"
               },
               "status": {
                 "$ref": "#/components/schemas/DeviceStatus"
@@ -7641,6 +7646,7 @@
         "properties": {
           "sn": {
             "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
             "description": "Device serial number",
             "example": "SFVA78RABZ12345678"
           },
